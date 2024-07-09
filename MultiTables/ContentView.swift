@@ -18,6 +18,8 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 VStack {
+                    Text("⭐️MultiTables⭐️")
+                        .font(.title)
                     Spacer()
                     Section("How many questions would you like?") {
                         Picker("Question Amount", selection: $questionAmount) {

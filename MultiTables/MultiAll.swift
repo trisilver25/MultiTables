@@ -21,12 +21,15 @@ struct MultiAll: View {
     @State private var showView = false
     @State private var correct = false
     
+    @State private var score = 0
+    
     var body: some View {
         NavigationStack {
             VStack {
                 Spacer()
                 
                 Text("Question \(currentQuestion) of \(questionCount)")
+                Text("Current Score: \(score)")
                 
                 Spacer()
                 
@@ -60,6 +63,7 @@ struct MultiAll: View {
         if table * multiplier == answer {
             correct = true
             showView = true
+            score += 1
         }
         else {
             correct = false
