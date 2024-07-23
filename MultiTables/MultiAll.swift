@@ -73,7 +73,7 @@ struct MultiAll: View {
     
     func nextQuestion() {
         randomMultiplier = Int.random(in: 1..<13)
-        answer = 0
+        answer = nil
         currentQuestion += 1
         showView = false
     }

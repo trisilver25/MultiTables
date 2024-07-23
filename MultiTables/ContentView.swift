@@ -11,6 +11,8 @@ struct ContentView: View {
     // Selecter variable
     @State private var questionAmount = 5
     
+    private var canary = Color("Canary")
+    
     // Array to hold question amounts
     let questionAmounts = [5, 10, 20]
 
@@ -119,7 +121,9 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .background(.white.gradient)
+            .background(
+                AngularGradient(colors: [canary, .teal], center: .topTrailing)
+            )
         }
     }
 }
